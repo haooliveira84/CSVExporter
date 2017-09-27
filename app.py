@@ -8,12 +8,7 @@ import operator
 
 from collections import Counter
 from collections import defaultdict
-from flask import Flask
-from flask_httpauth import HTTPTokenAuth
 
-
-app = Flask(__name__)
-auth = HTTPTokenAuth("Token")
 contador = Counter()
 result = {}
 fileopen = open(sys.argv[1], 'rt')
@@ -22,6 +17,7 @@ def verify_token(token):
     return token == os.getenv("MP_PASS")
 
 try:
+    verify_token(sys.argv[2])
     reader = csv.reader(fileopen)
     next(reader, None)
     sort = sorted(reader, key=operator.itemgetter(0)) 
