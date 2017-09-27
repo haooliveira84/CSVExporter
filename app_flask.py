@@ -42,7 +42,7 @@ def read_csv(reader):
 
 def json_print(csv_result):
     json_encoded = json.dumps(csv_result)
-    print json_encoded
+    return json_encoded
         
 if __name__ == '__main__':
     app.run("0.0.0.0", port=8090)
