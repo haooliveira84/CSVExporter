@@ -1,15 +1,25 @@
-#!/usr/bin/python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
 import csv
 import sys
 import operator
-import pandas as pd
+
 from collections import Counter
 from collections import defaultdict
+from flask import Flask
+from flask_httpauth import HTTPTokenAuth
 
 
+app = Flask(__name__)
+auth = HTTPTokenAuth("Token")
 contador = Counter()
 result = {}
 fileopen = open(sys.argv[1], 'rt')
+
+def verify_token(token):
+    return token == os.getenv("MP_PASS")
 
 try:
     reader = csv.reader(fileopen)
