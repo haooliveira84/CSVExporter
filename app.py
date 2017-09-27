@@ -7,9 +7,9 @@ import sys
 import operator
 
 from collections import Counter
-from collections import defaultdict
 
-contador = Counter()
+
+cont = Counter()
 result = {}
 fileopen = open(sys.argv[1], 'rt')
 
@@ -32,8 +32,8 @@ try:
             result[Estado] = [Nome]
     for row in sort:
         Estado, Cidade, Nome = row[0], row[1], row[2]
-        contador[Estado] += 1
-    for firesult in sorted(contador.items()):
+        cont[Estado] += 1
+    for firesult in sorted(cont.items()):
         print firesult
 finally:
     fileopen.close()
