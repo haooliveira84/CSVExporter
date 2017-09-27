@@ -14,7 +14,11 @@ result = {}
 fileopen = open(sys.argv[1], 'rt')
 
 def verify_token(token):
-    return token == os.getenv("MP_PASS")
+    if token == os.getenv("MP_PASS"):
+        return
+    else:
+        print "ERR"
+        quit()
 
 try:
     verify_token(sys.argv[2])
