@@ -5,8 +5,9 @@ import sys
 fileopen = open(sys.argv[1], 'rt')
 
 try:
-    reader = csv.reader(fileopen)
-    for row in reader:
-        print row
+    reader = csv.DictReader(fileopen)
+    for rows in reader:
+        rows = str(rows["Estado"])
+        print rows
 finally:
     fileopen.close()
