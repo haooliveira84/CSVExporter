@@ -25,11 +25,14 @@ In Windows CMD line:
 
 ## Request APP 
 
-Command to request:
+Request application
+`pyhton app.py file token`
+
+Example Command to request:
 
 `# python app.py arq.csv Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
-Terminal output
+Example Terminal output
 
 ```
 ('BA', 3)
