@@ -9,7 +9,7 @@
 
 ### Install Python 2.x or greater
 
-### Set System Operating Environment Variable
+### Set Operating System Environment Variable
 
 * Linux - bash:
 
