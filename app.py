@@ -13,15 +13,15 @@ cont = Counter()
 result = {}
 fileopen = open(sys.argv[1], 'rt')
 
+
 def verify_token(token):
     if token == os.getenv("MP_PASS"):
-        return
+        process_file(fileopen)
     else:
         print "ERR"
         quit()
 
-try:
-    verify_token(sys.argv[2])
+def process_file(fileopen):
     reader = csv.reader(fileopen)
     next(reader, None)
     sort = sorted(reader, key=operator.itemgetter(0)) 
@@ -35,5 +35,5 @@ try:
         cont[Estado] += 1
     for firesult in sorted(cont.items()):
         print firesult
-finally:
-    fileopen.close()
+
+verify_token(sys.argv[2])
