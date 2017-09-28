@@ -1,25 +1,21 @@
-## CSV READER APP Challager
-Technical Challange
+# DevOps Challager
 
-## Objectives
+
+## Goals
 
 * Read a CSV file and display list of states at alphabetical order and also display number of clients of each state
 
-## Requierements
+## Requirements
 
 ### Install Python 2.x or greater
 
 ### Set System Operating Environment Variable
 
-* Linux.
-
-In Linux terminal:
+* Linux - bash:
 
 `export MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
-* Windows.
-
-In Windows CMD line:
+* Windows - cmd:
 
 `set PATH=MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
@@ -33,7 +29,7 @@ Example Command to request:
 
 `# python app.py arq.csv Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
-Example Terminal output
+Example Output
 
 ```
 ('BA', 3)
