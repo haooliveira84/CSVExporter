@@ -17,7 +17,7 @@
 
 * Windows - cmd:
 
-`set PATH=MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
+`set MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
 ## Request APP 
 
