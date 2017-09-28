@@ -27,7 +27,7 @@ In Windows CMD line:
 
 Request application
 
-`pyhton app.py file token`
+`python app.py file token`
 
 Example Command to request:
 
