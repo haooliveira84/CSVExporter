@@ -11,12 +11,14 @@ Technical Challange
 
 ### Set System Operating Environment Variable
 
-* At Linux
+* Linux.
+
 In Linux terminal:
 
 `export MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
 
-* At Windows
+* Windows.
+
 In Windows CMD line:
 
 `set PATH=MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
