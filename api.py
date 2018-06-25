@@ -37,5 +37,21 @@ def main_route(query=None):
 		query = json_dict['query'] 
     print query
 
+def main_process(query):
+    req = query.json()
+    Estado = (req['estado'])
+    Cidade = (req['cidade'])
+    Nome = (req['nome'])
+    for Estado, Cidade, Nome in sort:
+        if Estado in result:
+            result[Estado].append(Nome)
+        else:
+            result[Estado] = [Nome]
+    for row in sort:
+        Estado, Cidade, Nome = row[0], row[1], row[2]
+        cont[Estado] += 1
+        firesult = sorted(cont.items())
+    print firesult
+    
 if __name__ == "__main__":
 	app.run("0.0.0.0",use_reloader=True)
