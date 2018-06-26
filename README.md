@@ -9,10 +9,6 @@
 
 ### Install Docker engine and docker-compose
 
-### Set Operating System Environment Variable
-
-* Linux - bash:
-
 docker-compose up --build
 
 ## Request APP 
