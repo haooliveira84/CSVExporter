@@ -17,7 +17,7 @@ from flask_httpauth import HTTPTokenAuth
 from collections import Counter
 
 cont = Counter()
-result = {}
+
 
 
 app = Flask(__name__)
