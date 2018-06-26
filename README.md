@@ -19,20 +19,19 @@ docker-compose up --build
 
 Request application
 
-`curl -XPOST -H "Authorization: Token Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X" http://hostname:9900/api -H "Content-Type: application/json" -d `
+`# curl -XPOST -H "Authorization: Token $token " http://$hostname:9900/api -H "Content-Type: application/json" -d  `
 
 Example Command to request:
 
-`# python app.py arq.csv Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
+`# curl -H "Authorization: Token Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X" http://172.16.27.115:9900/api -H "Content-Type: application/json" -d ""`
 
 Example Output
 
 ```
-('BA', 3)
-('RJ', 1)
-('RO', 1)
-('RS', 2)
-('SC', 2)
-('SP', 1)
-('TO', 1)
+[
+  [
+    "SC",
+    2
+  ]
+]
 ```
