@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  devops-challange:
+    image: devops-challange
+    build: .
+    ports:
+      - 9900:9900
