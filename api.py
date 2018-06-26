@@ -45,7 +45,7 @@ def main_process(json_data):
     for estado, nome in values:
         cont[estado] += 1
         customers = sorted(cont.items())
-    json_view(customers)
+    return jsonify(customers)
 
 if __name__ == "__main__":
 	app.run("0.0.0.0",use_reloader=True,port=9099)
