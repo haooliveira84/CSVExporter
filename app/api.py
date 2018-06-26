@@ -27,6 +27,17 @@ auth = HTTPTokenAuth("Token")
 def verify_token(token):
     return token == os.getenv("MP_PASS")
 
+@app.errorhandler(404)
+def not_found(error=None):
+    message = {
+            'status': 404,
+            'message': 'Not Found: ' + request.url,
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+
+    return resp
+
 @app.route('/api', methods=['GET', 'POST'])
 @auth.login_required
 def main_route():

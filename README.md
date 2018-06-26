@@ -7,23 +7,19 @@
 
 ## Requirements
 
-### Install Python 2.x or greater
+### Install Docker engine and docker-compose
 
 ### Set Operating System Environment Variable
 
 * Linux - bash:
 
-`export MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
-
-* Windows - cmd:
-
-`set MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X`
+docker-compose up --build
 
 ## Request APP 
 
 Request application
 
-`python app.py file token`
+`curl -XPOST -H "Authorization: Token Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X" http://hostname:9900/api -H "Content-Type: application/json" -d `
 
 Example Command to request:
 
