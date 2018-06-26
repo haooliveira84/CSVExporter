@@ -12,6 +12,8 @@ FROM python:alpine
 LABEL Name=devops-challange Version=0.0.1
     EXPOSE 9900
 
+    #Set Security ENV
+    ENV MP_PASS=Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X
     
     COPY ./app /app
     WORKDIR /app
