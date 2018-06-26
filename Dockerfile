@@ -10,12 +10,12 @@ FROM python:alpine
 #FROM continuumio/miniconda3
 
 LABEL Name=devops-challange Version=0.0.1
-EXPOSE 9900
+    EXPOSE 9900
 
-WORKDIR /app
-ADD . /app
+    WORKDIR /app
+    ADD . /app
 
-# Using pip:
-RUN python -m pip install -r requirements.txt
-CMD ["python", "-m", "api.py"]
+    # Using pip:
+    RUN python -m pip install -r requirements.txt
+    CMD ["python", "api.py"]
 
