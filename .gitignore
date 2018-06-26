@@ -3,3 +3,6 @@ arq.csv
 arq.json
 run.py
 app_flask.py
+app.pyc
+__pycache__/app.cpython-35.pyc
+docker-compose.debug.yml

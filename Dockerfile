@@ -13,6 +13,7 @@ LABEL Name=devops-challange Version=0.0.1
     EXPOSE 9900
 
     WORKDIR /app
+    COPY app/api /app
     ADD . /app
 
     # Using pip:
