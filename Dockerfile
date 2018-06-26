@@ -20,5 +20,5 @@ LABEL Name=devops-challange Version=0.0.1
     ENTRYPOINT ["python"]
     # Using pip:
     RUN python -m pip install -r requirements.txt
-    CMD ["python", "api.py"]
+    CMD ["api.py"]
 
