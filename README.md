@@ -19,7 +19,7 @@ Request application
 
 Example Command to request:
 
-`# curl -H "Authorization: Token Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X" http://172.16.27.115:9900/api -H "Content-Type: application/json" -d ""`
+`# curl -H "Authorization: Token Tr8DN93e6MFCrH8fO0BASrRtbTTjDJ5X" http://172.16.27.115:9900/api -H "Content-Type: application/json" -d "@customer.json"`
 
 Example Output
 
