@@ -32,17 +32,20 @@ def verify_token(token):
 def main_route():
     if request.json:
         json_data = request.get_json()
-        result = main_process(json_data)
-        return result
+        firesult = main_process(json_data)
+        return firesult
     else:
         return "No json received"
 
 def main_process(json_data):
-    for item in json_data:
-        Estado =  item['estado']
-        print Estado
-        result = Estado
-    return result
+    values = []
+    data = sorted(json_data, key=lambda k: k['estado'])
+    for value in data:
+        values.append((value['estado'], value['nome']))
+    for estado, nome in values:
+        cont[estado] += 1
+        customers = sorted(cont.items())
+    json_view(customers)
 
 if __name__ == "__main__":
-	app.run("0.0.0.0",use_reloader=True)
+	app.run("0.0.0.0",use_reloader=True,port=9099)
