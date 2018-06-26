@@ -29,29 +29,20 @@ def verify_token(token):
 
 @app.route('/api', methods=['GET', 'POST'])
 @auth.login_required
-def main_route(query=None):
-    json_dict = request.get_json()
-    if request.headers.get('query'):
-		query = request.headers.get('query')
+def main_route():
+    if request.json:
+        json_data = request.get_json()
+        result = main_process(json_data)
+        return result
     else:
-		query = json_dict['query'] 
-    print query
+        return "No json received"
 
-def main_process(query):
-    req = query.json()
-    Estado = (req['estado'])
-    Cidade = (req['cidade'])
-    Nome = (req['nome'])
-    for Estado, Cidade, Nome in sort:
-        if Estado in result:
-            result[Estado].append(Nome)
-        else:
-            result[Estado] = [Nome]
-    for row in sort:
-        Estado, Cidade, Nome = row[0], row[1], row[2]
-        cont[Estado] += 1
-        firesult = sorted(cont.items())
-    print firesult
-    
+def main_process(json_data):
+    for item in json_data:
+        Estado =  item['estado']
+        print Estado
+        result = Estado
+    return result
+
 if __name__ == "__main__":
 	app.run("0.0.0.0",use_reloader=True)
