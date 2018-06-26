@@ -3,7 +3,7 @@
 
 ## Goals
 
-* Read a CSV file and display list of states at alphabetical order and also display number of clients of each state
+* Read a JSON request and display list of states at alphabetical order and also display number of clients of each state
 
 ## Requirements
 
